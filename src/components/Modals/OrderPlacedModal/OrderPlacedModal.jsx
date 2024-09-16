@@ -25,7 +25,7 @@ function OrderPlaced(props) {
         <h3>Order Placed Sucessfully</h3>
         <p>
           You’ve successfully placed an order of ₹970.00 (Nine hundred Ninety
-          only) from <span style={{ color: "#8A2B06" }}>REACTBITES!</span>
+          only) from <span style={{ color: "#8A2B06" }}>ReHarvest!</span>
         </p>
       </div>
       <div style={{ width: "85%" }}>

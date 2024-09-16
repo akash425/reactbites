@@ -325,7 +325,7 @@ function LoginPage() {
                 textDecoration: "underline",
               }}
             >
-              REACTBITES
+              ReHarvest
             </h1>
           </div>
           <div>
@@ -371,10 +371,7 @@ function LoginPage() {
                     }}
                   >
                     <p>
-                      At REACTBITES elevate your senses with our premium,
-                      just-in-time crafted meals. Our skilled chefs promise a
-                      gourmet experience every time quality and freshness
-                      guaranteed. Indulge in excellence with us!
+                      ReHarvest is an innovative platform connecting farmers with companies and agencies to repurpose agricultural waste into valuable resources, promoting sustainable farming and eco-friendly practices.
                     </p>
                   </div>
                 </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../cssFIles/header/header.css";
-import mealsImg from "../../assets/meals.jpg";
+import mealsImg from "../../assets/meals.jpeg";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Modal } from "react-bootstrap";
@@ -42,7 +42,7 @@ function Header(props) {
               }}
               style={{ cursor: "pointer" }}
             >
-              REACTBITES
+              ReHarvest
             </h2>
           </div>
           <div className="header-button-holder">

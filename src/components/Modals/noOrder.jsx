@@ -31,7 +31,7 @@ function NoOrders({ setActiveMenu }) {
           <h3>No Order Placed</h3>
           <p>
             Unfortunately, your order is still missing from our records at
-            REACTBITES.
+            ReHarvest.
           </p>
         </div>
 

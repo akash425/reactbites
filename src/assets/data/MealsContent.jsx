@@ -1,413 +1,104 @@
 const content = {
-  soup: [
+  dry: [
     {
       id: 1,
-      name: "Non Veg Pho",
-      description: "Flat Vietnamese Noodle Summered In Aromatic Broth.",
-      price: 345,
-      veg: false,
+      name: "Rice Husk",
+      description: "A byproduct of rice milling, used for fuel, biochar, and construction materials due to its high silica content.",
+      category: "Dry, Lightweight",
+      price: 25
     },
     {
       id: 2,
-      name: "Chicken Hot And Sour Soup",
-      description: "Spicy, Sour And Hot Soup With Lots Of Veggies",
-      price: 345,
-      veg: false,
+      name: "Corn Stover",
+      description: "The stalks, leaves, and husks left after corn harvest, used in biofuel, mulch, and livestock feed.",
+      category: "Dry, Fiber-rich",
+      price: 18
     },
     {
       id: 3,
-      name: "Chicken Lemon Coriander Soup",
-      description: "Healthy Filling Lemon Coriander Flavour Soup",
-      price: 345,
-      veg: false,
+      name: "Wheat Straw",
+      description: "Post-harvest wheat residue used for biofuel, animal bedding, composting, and paper production.",
+      category: "Dry, Lightweight",
+      price: 20
     },
     {
       id: 4,
-      name: "Chicken Manchow",
-      description: "",
-      price: 345,
-      veg: false,
+      name: "Cotton Stalks",
+      description: "Stalks used in paper manufacturing, biofuel production, and particle boards.",
+      category: "Dry, Fiber-rich",
+      price: 30
     },
     {
       id: 5,
-      name: "Chicken Sweet Corn",
-      description: "",
-      price: 345,
-      veg: false,
-    },
+      name: "Peanut Shells",
+      description: "Used as mulch, animal bedding, and in biofuel and compost production.",
+      category: "Dry, Lightweight",
+      price: 15
+    }
+  ],
+  wet: [
     {
       id: 6,
-      name: "Chicken Tom Yum",
-      description: "Lemongrass, Kaffir And Galangal Shine A Spicy Thai Soup.",
-      price: 345,
-      veg: false,
+      name: "Banana Peels",
+      description: "Used for composting, livestock feed, and in bioplastics due to high potassium content.",
+      category: "Wet, Biodegradable",
+      price: 10
     },
     {
       id: 7,
-      name: "Creamy Tomato & Basil",
-      description: "Mozzarella Fritters, Sourdough Toast.",
-      price: 275,
-      veg: true,
-    },
+      name: "Sugarcane Bagasse",
+      description: "Fibrous waste from sugarcane, used for bioenergy, paper, and biodegradable products.",
+      category: "Wet, Fiber-rich",
+      price: 22
+    }
+  ],
+  lightweight: [
     {
       id: 8,
-      name: "Mushroom Veloute",
-      description: "",
-      price: 395,
-      veg: true,
+      name: "Coconut Shells",
+      description: "Durable shells used in activated carbon production, crafts, biofuel, and eco-friendly products.",
+      category: "Lightweight, Dry",
+      price: 35
     },
     {
       id: 9,
-      name: "Prawns Hot And Sour Soup",
-      description: "Spicy, Sour And Hot Soup With Lots Of Veggies",
-      price: 375,
-      veg: false,
-    },
+      name: "Palm Kernel Shells",
+      description: "Byproduct of palm oil processing, used as biomass fuel and in activated carbon production.",
+      category: "Lightweight, Dry",
+      price: 28
+    }
+  ],
+  heavy: [
     {
       id: 10,
-      name: "Prawns Lemon Coriander Soup",
-      description: "Healthy Filling Lemon Coriander Flavour Soup",
-      price: 375,
-      veg: false,
-    },
+      name: "Soybean Residue",
+      description: "Post-harvest residue used for livestock feed, biofertilizer, and biogas production.",
+      category: "Heavy, Wet",
+      price: 40
+    }
+  ],
+  fiberRich: [
     {
       id: 11,
-      name: "Prawns Manchow Soup",
-      description: "Healthy Indo- Chinese Soup Served With Fried Noodle",
-      price: 375,
-      veg: false,
+      name: "Corn Stover",
+      description: "The stalks, leaves, and husks left after corn harvest, used in biofuel, mulch, and livestock feed.",
+      category: "Fiber-rich, Dry",
+      price: 18
     },
     {
       id: 12,
-      name: "Prawns Pho Soup",
-      description: "Flat Vietnamese Noodle Summered In Aromatic Broth.",
-      price: 375,
-      veg: false,
+      name: "Sugarcane Bagasse",
+      description: "Fibrous waste from sugarcane, widely used for bioenergy, paper, and biodegradable products.",
+      category: "Fiber-rich, Wet",
+      price: 22
     },
     {
       id: 13,
-      name: "Prawns Sweetcorn Soup",
-      description: "Made With Tender Corn Kernels And Herbs",
-      price: 375,
-      veg: false,
-    },
-    {
-      id: 14,
-      name: "Prawns Tom Yum",
-      description: "Lemongrass, Kaffir And Galangal Shine A Spicy Thai Soup.",
-      price: 375,
-      veg: false,
-    },
-    {
-      id: 15,
-      name: "Veg Hot And Sour Soup",
-      description: "Spicy, Sour And Hot Soup With Lots Of Veggies",
-      price: 310,
-      veg: true,
-    },
-    {
-      id: 16,
-      name: "Veg Lemon Coriander Soup",
-      description: "Healthy Filling Lemon Coriander Flavour Soup",
-      price: 310,
-      veg: true,
-    },
-    {
-      id: 17,
-      name: "Veg Manchow",
-      description: "",
-      price: 310,
-      veg: true,
-    },
-    {
-      id: 18,
-      name: "Veg Pho",
-      description: "Flat Vietnamese Noodle Summered In Aromatic Broth.",
-      price: 310,
-      veg: true,
-    },
-    {
-      id: 19,
-      name: "Veg Sweet Corn",
-      description: "",
-      price: 310,
-      veg: true,
-    },
-    {
-      id: 20,
-      name: "Veg Tom Yum",
-      description: "Lemongrass, Kaffir And Galangal Shine A Spicy Thai Soup.",
-      price: 310,
-      veg: true,
-    },
-  ],
-  burger: [
-    {
-      id: 15,
-      name: "Bombay Toasty Sandwich",
-      description:
-        "Multigrain Bread Roast Beet , Potato Onion, Marinated Cucumber",
-      price: 485,
-      veg: true,
-    },
-    {
-      id: 16,
-      name: "Classic Mushroom Burger",
-      description:
-        "A Classic Mushroom Burger Melt With Organic Himalayan Cheese",
-      price: 545,
-      veg: true,
-    },
-    {
-      id: 17,
-      name: "Grain Special Grilled Paneer",
-      description: "",
-      price: 555,
-      veg: true,
-    },
-    {
-      id: 18,
-      name: "Feta Beetroot",
-      description: "",
-      price: 485,
-      veg: true,
-    },
-    {
-      id: 19,
-      name: "Grain Veggie Burger",
-      description:
-        "Sunflower Seeds Cashew Nuts and Exotic Veg, Spicy Flaxseed Mayo.",
-      price: 495,
-      veg: true,
-    },
-    {
-      id: 20,
-      name: "Malaysian Chicken Burger",
-      description:
-        "Spicy Golden Fried Chicken, Chilli-Beansprout & Coconut Slaw",
-      price: 510,
-      veg: false,
-    },
-    {
-      id: 21,
-      name: "Triple Club Sandwich",
-      description:
-        "Pulled Roast Chicken, Stone Ground Dill Pesto And House Chips",
-      price: 525,
-      veg: false,
-    },
-    {
-      id: 22,
-      name: "Toasted Vegetable & Cheese Sandwich",
-      description: "",
-      price: 450,
-      veg: true,
-    },
-  ],
-  pizza: [
-    {
-      id: 22,
-      name: "Avocado Pizza [12 Inches]",
-      description: "Avocado Tartare, Toasted Pine Nuts & Sun-Dried Tomatoes",
-      price: 795,
-      veg: true,
-    },
-    {
-      id: 23,
-      name: "Barbecue Chicken Pepper",
-      description: "",
-      price: 645,
-      veg: false,
-    },
-    {
-      id: 24,
-      name: "Burrata Pizza [12 Inches]",
-      description: "Plum sundry tomatoes, basil, arugula & burrata",
-      price: 645,
-      veg: true,
-    },
-    {
-      id: 25,
-      name: "Chicken Pizza [12 Inches]",
-      description: "Smoky Chicken Tikka, Sour Cream & Red Onion",
-      price: 645,
-      veg: false,
-    },
-    {
-      id: 26,
-      name: "Chicken Makhni King (pizza)",
-      description: "",
-      price: 645,
-      veg: false,
-    },
-    {
-      id: 27,
-      name: "Classic Margherita Pizza [12 Inches]",
-      description:
-        "Zesty tomato sauce, fresh basil leaves and mozzarella cheese",
-      price: 610,
-      veg: true,
-    },
-    {
-      id: 28,
-      name: "Lamb Pizza [12 Inches]",
-      description: "Spicy Zaatar Lamb, Feta, Arugula",
-      price: 695,
-      veg: false,
-    },
-    {
-      id: 29,
-      name: "Mushroom Pizza [12 Inches]",
-      description:
-        "Oyster, Shiitake & Button Mushroom, Goat Cheese & Truffle Oil",
-      price: 645,
-      veg: true,
-    },
-    {
-      id: 30,
-      name: "Pepperoni Pizza [12 Inches]",
-      description: "Classic Pepperoni, Mozzarella & Scamorza",
-      price: 695,
-      veg: false,
-    },
-    {
-      id: 31,
-      name: "Peppy Paneer",
-      description: "",
-      price: 625,
-      veg: true,
-    },
-    {
-      id: 32,
-      name: "Verde Pizza [12 Inches]",
-      description: "Charred Broccoli, Asparagus, Green Tomato Carpaccio & Feta",
-      price: 625,
-      veg: true,
-    },
-  ],
-  bowls: [
-    {
-      id: 33,
-      name: "Bangkok Bowl",
-      description: "",
-      price: 650,
-      veg: true,
-    },
-    {
-      id: 34,
-      name: "Bibimbap Veg",
-      description: "Immering rice and vegetable served in traditional Dolsot",
-      price: 625,
-      veg: true,
-    },
-    {
-      id: 35,
-      name: "Chicken Bibimbap",
-      description: "Immering Rice And Chicken Served In Traditional Dolsot",
-      price: 675,
-      veg: false,
-    },
-    {
-      id: 36,
-      name: "Chicken Khao Suey",
-      description: "Soft And Crisp Noodle In Herbed Coconut Broth.",
-      price: 695,
-      veg: false,
-    },
-    {
-      id: 37,
-      name: "Chicken Mexican Burrito Bowl",
-      description: "",
-      price: 725,
-      veg: false,
-    },
-    {
-      id: 38,
-      name: "Chicken Ramen Bowl",
-      description: "Miso broth, shiitake, Asian greens",
-      price: 595,
-      veg: false,
-    },
-    {
-      id: 39,
-      name: "Gong Bao Bowl",
-      description:
-        "Crisp Cottage Cheese, Chilli-Tomato-Soy Sauce, Steamed Rice",
-      price: 625,
-      veg: true,
-    },
-    {
-      id: 40,
-      name: "Prawns Khao Suey",
-      description: "",
-      price: 785,
-      veg: false,
-    },
-    {
-      id: 41,
-      name: "Shanghai Bowl",
-      description: "Crisp Chicken, Sesame-Sweet Soy Sauce, Steamed Rice",
-      price: 650,
-      veg: false,
-    },
-    {
-      id: 42,
-      name: "Veg Khao Suey",
-      description: "Soft And Crisp Noodle In Herbed Coconut Broth.",
-      price: 595,
-      veg: true,
-    },
-    {
-      id: 43,
-      name: "Veg Mexican Burrito Bowl",
-      description: "",
-      price: 650,
-      veg: true,
-    },
-    {
-      id: 44,
-      name: "Veg Ramen Bowl",
-      description: "Miso Broth, Shiitake, Asian Greens",
-      price: 550,
-      veg: true,
-    },
-  ],
-  desserts: [
-    {
-      id: 45,
-      name: "Blueberry Cheese Cake",
-      description: "",
-      price: 395,
-      veg: true,
-    },
-    {
-      id: 46,
-      name: "Lotus Biscoff",
-      description: "",
-      price: 475,
-      veg: true,
-    },
-    {
-      id: 47,
-      name: "Nutella Baked German Fudge",
-      description: "",
-      price: 395,
-      veg: true,
-    },
-    {
-      id: 48,
-      name: "Whole Wheat And Jaggery Fudge",
-      description: "",
-      price: 345,
-      veg: true,
-    },
-    {
-      id: 49,
-      name: "Whole Wheat Carrot Cake (eggless)",
-      description: "With Vegan cream cheese frosting.",
-      price: 395,
-      veg: true,
-    },
+      name: "Cotton Stalks",
+      description: "Stalks used in paper manufacturing, biofuel production, and particle boards.",
+      category: "Fiber-rich, Dry",
+      price: 30
+    }
   ],
 };
 
